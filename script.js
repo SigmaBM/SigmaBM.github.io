@@ -9,8 +9,7 @@ const study = lab.util.fromObject({
       "path": undefined
     },
     {
-      "type": "lab.plugins.Download",
-      "filePrefix": "study",
+      "type": "lab.plugins.PostMessage",
       "path": undefined
     }
   ],
@@ -4628,9 +4627,7 @@ this.parent.parent.parameters.done += 1;
       ],
       "files": {},
       "parameters": {},
-      "responses": {
-        "keypress(s)": "skip"
-      },
+      "responses": {},
       "messageHandlers": {},
       "viewport": [
         800,
