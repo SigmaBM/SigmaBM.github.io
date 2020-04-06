@@ -4806,7 +4806,7 @@ this.parent.parent.parameters.done += 1;
           "stroke": null,
           "strokeWidth": 1,
           "fill": "#ffffff",
-          "text": "五组游戏结束，您累计获得了${this.parameters.reward}分\n折合额外被试费奖励${this.parameters.reward * 3 / 10}元",
+          "text": "五组游戏结束，您累计获得了${this.parameters.reward}分\n折合额外被试费奖励${this.parameters.reward * 0.3}元",
           "fontStyle": "normal",
           "fontWeight": "normal",
           "fontSize": "24",
