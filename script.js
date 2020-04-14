@@ -138,6 +138,7 @@ const study = lab.util.fromObject({
         "before:prepare": function anonymous(
 ) {
 this.parent.parameters.reward = 0;
+this.parent.parameters.trials = 60;
 }
       },
       "viewport": [
@@ -238,7 +239,7 @@ this.parent.parameters.reward = 0;
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "10"
+        "n": "${this.parameters.trials}"
       },
       "responses": {},
       "messageHandlers": {
@@ -249,7 +250,7 @@ this.parameters.done = 0;
 this.parameters.pH_W = 0.7;
 this.parameters.pH_L = 0.2;
 this.parameters.last_action = "NULL";
-this.parameters.last_reward = "NULL";
+this.parameters.last_reward = "NULL"; 
 },
         "after:end": function anonymous(
 ) {
@@ -621,8 +622,8 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
             "content": [
               {
                 "type": "rect",
-                "left": -1,
-                "top": -1.03,
+                "left": 0,
+                "top": 0,
                 "angle": 0,
                 "width": 801.01,
                 "height": 602.07,
@@ -669,14 +670,14 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
               {
                 "type": "i-text",
                 "left": 0,
-                "top": 62,
+                "top": 61,
                 "angle": 0,
-                "width": 588.46,
-                "height": 27.12,
+                "width": 707.42,
+                "height": 31.64,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -833,8 +834,8 @@ this.parent.parent.parameters.done += 1;
                 "left": -100,
                 "top": -75,
                 "angle": 0,
-                "width": 252,
-                "height": 31.64,
+                "width": 216,
+                "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
@@ -851,12 +852,12 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 686.53,
+                "width": 707.42,
                 "height": 31.64,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -989,7 +990,7 @@ this.parent.parent.parameters.done += 1;
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "60"
+        "n": "15"
       },
       "files": {},
       "responses": {
@@ -999,7 +1000,7 @@ this.parent.parent.parameters.done += 1;
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
-this.parameters.count_down = 60
+this.parameters.count_down = 15
 }
       },
       "title": "Loop",
@@ -1023,12 +1024,12 @@ this.parameters.count_down = 60
             "left": 0,
             "top": -75,
             "angle": 0,
-            "width": 539.12,
-            "height": 68.34,
+            "width": 452.18,
+            "height": 58.58,
             "stroke": null,
             "strokeWidth": 1,
             "fill": "#ffffff",
-            "text": "第一组游戏结束，请休息1分钟\n(1分钟后会自动进入下一组实验的准备界面)",
+            "text": "第一组游戏结束，请休息15秒\n(15秒后会自动进入下一组实验的准备界面)",
             "fontStyle": "normal",
             "fontWeight": "normal",
             "fontSize": "24",
@@ -1184,7 +1185,7 @@ this.parent.parameters.count_down -= 1
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "10"
+        "n": "${this.parameters.trials}"
       },
       "responses": {},
       "messageHandlers": {
@@ -1567,8 +1568,8 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
             "content": [
               {
                 "type": "rect",
-                "left": -1,
-                "top": -1.03,
+                "left": 0,
+                "top": 0,
                 "angle": 0,
                 "width": 801.01,
                 "height": 602.07,
@@ -1617,12 +1618,12 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 588.46,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -1779,8 +1780,8 @@ this.parent.parent.parameters.done += 1;
                 "left": -100,
                 "top": -75,
                 "angle": 0,
-                "width": 252,
-                "height": 31.64,
+                "width": 216,
+                "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
@@ -1797,12 +1798,12 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 686.53,
-                "height": 31.64,
+                "width": 606.36,
+                "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -1922,172 +1923,6 @@ this.parent.parent.parameters.done += 1;
             "title": "ResultHead",
             "tardy": true,
             "skip": "${this.parameters.last_action == \"TAIL\"}"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 801.27,
-                "height": 603.19,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": -100,
-                "angle": 0,
-                "width": 192,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "请选择硬币的正面",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": -200,
-                "top": 175,
-                "angle": 0,
-                "width": 83.8,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "正面：z",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": 175,
-                "angle": 0,
-                "width": 84.16,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "反面：x",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": -250,
-                "angle": 0,
-                "width": 324.46,
-                "height": 22.6,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "本组已得分：${parameters.reward}",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "20",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "left"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": -200,
-                "angle": 0,
-                "width": 307.38,
-                "height": 22.6,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "本组已进行：${parameters.done}",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "20",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "left"
-              },
-              {
-                "type": "i-text",
-                "left": -325,
-                "top": -250,
-                "angle": 0,
-                "width": 48,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "组二",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "image",
-                "left": -200,
-                "top": 50,
-                "angle": 0,
-                "width": 131.2,
-                "height": 130.79,
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"coin_head.jpg\"] }"
-              },
-              {
-                "type": "image",
-                "left": 200,
-                "top": 50,
-                "angle": 0,
-                "width": 132.42999999999998,
-                "height": 132.42999999999998,
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"coin_tail.jpg\"] }"
-              }
-            ],
-            "files": {
-              "coin_head.jpg": "embedded\u002F226d09add5b2d7fa79c4e5642ab6456154752d0538b70e08c1547501713b7055.jpg",
-              "coin_tail.jpg": "embedded\u002Fea7543851a89e0e026eafc098b2028aeeaecd445d41729efbaac0ac693c0ff30.jpg"
-            },
-            "parameters": {},
-            "responses": {
-              "keypress(z)": "HEAD",
-              "keypress(x)": "TAIL"
-            },
-            "messageHandlers": {},
-            "viewport": [
-              800,
-              600
-            ],
-            "title": "Validation",
-            "correctResponse": "HEAD",
-            "tardy": true,
-            "skip": "${this.parameters.done != 5}"
           }
         ]
       }
@@ -2101,7 +1936,7 @@ this.parent.parent.parameters.done += 1;
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "60"
+        "n": "15"
       },
       "files": {},
       "responses": {
@@ -2111,7 +1946,7 @@ this.parent.parent.parameters.done += 1;
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
-this.parameters.count_down = 60
+this.parameters.count_down = 15
 }
       },
       "title": "Loop",
@@ -2135,12 +1970,12 @@ this.parameters.count_down = 60
             "left": 0,
             "top": -75,
             "angle": 0,
-            "width": 462.11,
+            "width": 452.18,
             "height": 58.58,
             "stroke": null,
             "strokeWidth": 1,
             "fill": "#ffffff",
-            "text": "第二组游戏结束，请休息1分钟\n(1分钟后会自动进入下一组实验的准备界面)",
+            "text": "第二组游戏结束，请休息15秒\n(15秒后会自动进入下一组实验的准备界面)",
             "fontStyle": "normal",
             "fontWeight": "normal",
             "fontSize": "24",
@@ -2153,8 +1988,8 @@ this.parameters.count_down = 60
             "left": 0,
             "top": 50,
             "angle": 0,
-            "width": 621.07,
-            "height": 31.64,
+            "width": 532.35,
+            "height": 27.12,
             "stroke": null,
             "strokeWidth": 1,
             "fill": "#ffffff",
@@ -2296,7 +2131,7 @@ this.parent.parameters.count_down -= 1
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "10"
+        "n": "${this.parameters.trials}"
       },
       "responses": {},
       "messageHandlers": {
@@ -2729,12 +2564,12 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 588.46,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -2909,12 +2744,12 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 588.46,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -3047,7 +2882,7 @@ this.parent.parent.parameters.done += 1;
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "60"
+        "n": "15"
       },
       "files": {},
       "responses": {
@@ -3057,7 +2892,7 @@ this.parent.parent.parameters.done += 1;
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
-this.parameters.count_down = 60
+this.parameters.count_down = 15
 }
       },
       "title": "Loop",
@@ -3081,12 +2916,12 @@ this.parameters.count_down = 60
             "left": 0,
             "top": -75,
             "angle": 0,
-            "width": 462.11,
+            "width": 452.18,
             "height": 58.58,
             "stroke": null,
             "strokeWidth": 1,
             "fill": "#ffffff",
-            "text": "第三组游戏结束，请休息1分钟\n(1分钟后会自动进入下一组实验的准备界面)",
+            "text": "第三组游戏结束，请休息15秒\n(15秒后会自动进入下一组实验的准备界面)",
             "fontStyle": "normal",
             "fontWeight": "normal",
             "fontSize": "24",
@@ -3099,8 +2934,8 @@ this.parameters.count_down = 60
             "left": 0,
             "top": 50,
             "angle": 0,
-            "width": 621.07,
-            "height": 31.64,
+            "width": 532.35,
+            "height": 27.12,
             "stroke": null,
             "strokeWidth": 1,
             "fill": "#ffffff",
@@ -3242,7 +3077,7 @@ this.parent.parameters.count_down -= 1
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "10"
+        "n": "${this.parameters.trials}"
       },
       "responses": {},
       "messageHandlers": {
@@ -3675,12 +3510,12 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 588.46,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -3855,12 +3690,12 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 588.46,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -3980,172 +3815,6 @@ this.parent.parent.parameters.done += 1;
             "title": "ResultHead",
             "tardy": true,
             "skip": "${this.parameters.last_action == \"TAIL\"}"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 801.27,
-                "height": 603.19,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": -100,
-                "angle": 0,
-                "width": 192,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "请选择硬币的反面",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": -200,
-                "top": 175,
-                "angle": 0,
-                "width": 83.8,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "正面：z",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": 175,
-                "angle": 0,
-                "width": 84.16,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "反面：x",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": -250,
-                "angle": 0,
-                "width": 324.46,
-                "height": 22.6,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "本组已得分：${parameters.reward}",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "20",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "left"
-              },
-              {
-                "type": "i-text",
-                "left": 200,
-                "top": -200,
-                "angle": 0,
-                "width": 307.38,
-                "height": 22.6,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "本组已进行：${parameters.done}",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "20",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "left"
-              },
-              {
-                "type": "i-text",
-                "left": -325,
-                "top": -250,
-                "angle": 0,
-                "width": 48,
-                "height": 27.12,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#ffffff",
-                "text": "组四",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": "24",
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              },
-              {
-                "type": "image",
-                "left": -200,
-                "top": 50,
-                "angle": 0,
-                "width": 131.2,
-                "height": 130.79,
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"coin_head.jpg\"] }"
-              },
-              {
-                "type": "image",
-                "left": 200,
-                "top": 50,
-                "angle": 0,
-                "width": 132.42999999999998,
-                "height": 132.42999999999998,
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"coin_tail.jpg\"] }"
-              }
-            ],
-            "files": {
-              "coin_head.jpg": "embedded\u002F226d09add5b2d7fa79c4e5642ab6456154752d0538b70e08c1547501713b7055.jpg",
-              "coin_tail.jpg": "embedded\u002Fea7543851a89e0e026eafc098b2028aeeaecd445d41729efbaac0ac693c0ff30.jpg"
-            },
-            "parameters": {},
-            "responses": {
-              "keypress(z)": "HEAD",
-              "keypress(x)": "TAIL"
-            },
-            "messageHandlers": {},
-            "viewport": [
-              800,
-              600
-            ],
-            "title": "Validation",
-            "correctResponse": "TAIL",
-            "tardy": true,
-            "skip": "${this.parameters.done != 7}"
           }
         ]
       }
@@ -4159,7 +3828,7 @@ this.parent.parent.parameters.done += 1;
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "60"
+        "n": "15"
       },
       "files": {},
       "responses": {
@@ -4169,7 +3838,7 @@ this.parent.parent.parameters.done += 1;
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
-this.parameters.count_down = 60
+this.parameters.count_down = 15
 }
       },
       "title": "Loop",
@@ -4193,12 +3862,12 @@ this.parameters.count_down = 60
             "left": 0,
             "top": -75,
             "angle": 0,
-            "width": 462.11,
+            "width": 452.18,
             "height": 58.58,
             "stroke": null,
             "strokeWidth": 1,
             "fill": "#ffffff",
-            "text": "第四组游戏结束，请休息1分钟\n(1分钟后会自动进入下一组实验的准备界面)",
+            "text": "第四组游戏结束，请休息15秒\n(15秒后会自动进入下一组实验的准备界面)",
             "fontStyle": "normal",
             "fontWeight": "normal",
             "fontSize": "24",
@@ -4354,7 +4023,7 @@ this.parent.parameters.count_down -= 1
       ],
       "sample": {
         "mode": "draw-replace",
-        "n": "10"
+        "n": "${this.parameters.trials}"
       },
       "responses": {},
       "messageHandlers": {
@@ -4787,12 +4456,12 @@ this.parent.parent.parameters.last_action = this.parameters.AI_action;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 588.46,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -4949,8 +4618,8 @@ this.parent.parent.parameters.done += 1;
                 "left": -100,
                 "top": -75,
                 "angle": 0,
-                "width": 252,
-                "height": 31.64,
+                "width": 216,
+                "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
@@ -4967,12 +4636,12 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 686.53,
-                "height": 31.64,
+                "width": 606.36,
+                "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "#ffffff",
-                "text": "${state.correct ? \"恭喜！加一分\": \"很遗憾，继续努力\"}",
+                "text": "${state.correct ? \"😄恭喜！加一分\": \"🙁未能获得加分\"}",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": "24",
@@ -5133,12 +4802,12 @@ this.parent.parent.parameters.done += 1;
           "left": 0,
           "top": -75,
           "angle": 0,
-          "width": 628.35,
+          "width": 870.57,
           "height": 58.58,
           "stroke": null,
           "strokeWidth": 1,
           "fill": "#ffffff",
-          "text": "五组游戏结束，您累计获得了${this.parameters.reward}分\n折合额外被试费奖励${this.parameters.reward * 3 \u002F 10}元",
+          "text": "五组游戏结束，您累计获得了${this.parameters.reward}分\n折合额外被试费奖励${Math.round(this.parameters.reward \u002F 30 * 100) \u002F 100}元",
           "fontStyle": "normal",
           "fontWeight": "normal",
           "fontSize": "24",
@@ -5153,7 +4822,8 @@ this.parent.parent.parameters.done += 1;
       "messageHandlers": {
         "run": function anonymous(
 ) {
-this.parameters.rmb = this.parameters.reward * 0.3
+debugger
+this.parameters.rmb = this.parameters.reward / 30 
 }
       },
       "viewport": [
