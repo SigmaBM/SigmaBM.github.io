@@ -1193,8 +1193,8 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 0.4;
-this.parameters.pH_L = 0.6;
+this.parameters.pH_W = 0.3;
+this.parameters.pH_L = 0.8;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
@@ -3085,8 +3085,8 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_H = 0.35;
-this.parameters.pH_T = 0.65;
+this.parameters.pH_H = 0.3;
+this.parameters.pH_T = 0.7;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
@@ -4031,8 +4031,8 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 0.65;
-this.parameters.pH_L = 0.3;
+this.parameters.pH_W = 0.7;
+this.parameters.pH_L = 0.2;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
