@@ -138,7 +138,7 @@ const study = lab.util.fromObject({
         "before:prepare": function anonymous(
 ) {
 this.parent.parameters.reward = 0;
-this.parent.parameters.trials = 60;
+this.parent.parameters.trials = 10;
 }
       },
       "viewport": [
