@@ -4636,7 +4636,7 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 606.36,
+                "width": 571.52,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
@@ -4690,7 +4690,7 @@ this.parent.parent.parameters.done += 1;
                 "left": 200,
                 "top": -250,
                 "angle": 0,
-                "width": 324.46,
+                "width": 312.32,
                 "height": 22.6,
                 "stroke": null,
                 "strokeWidth": 1,
@@ -4708,7 +4708,7 @@ this.parent.parent.parameters.done += 1;
                 "left": 200,
                 "top": -200,
                 "angle": 0,
-                "width": 307.38,
+                "width": 295.68,
                 "height": 22.6,
                 "stroke": null,
                 "strokeWidth": 1,
@@ -4781,8 +4781,8 @@ this.parent.parent.parameters.done += 1;
         },
         {
           "type": "i-text",
-          "left": -15,
-          "top": 100,
+          "left": 0,
+          "top": 75,
           "angle": 0,
           "width": 168,
           "height": 27.12,
@@ -4814,11 +4814,31 @@ this.parent.parent.parameters.done += 1;
           "fontFamily": "sans-serif",
           "lineHeight": 1.16,
           "textAlign": "center"
+        },
+        {
+          "type": "i-text",
+          "left": 0,
+          "top": 250,
+          "angle": 0,
+          "width": 144,
+          "height": 27.12,
+          "stroke": null,
+          "strokeWidth": 1,
+          "fill": "#ffffff",
+          "text": "按空格键继续",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+          "fontSize": "24",
+          "fontFamily": "sans-serif",
+          "lineHeight": 1.16,
+          "textAlign": "center"
         }
       ],
       "files": {},
       "parameters": {},
-      "responses": {},
+      "responses": {
+        "keypress(Space)": "continue"
+      },
       "messageHandlers": {
         "run": function anonymous(
 ) {
@@ -4831,7 +4851,6 @@ this.parameters.rmb = this.parameters.reward / 30
         600
       ],
       "title": "End",
-      "timeout": "1000",
       "tardy": true
     }
   ]
