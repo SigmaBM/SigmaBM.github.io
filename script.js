@@ -247,8 +247,10 @@ this.parent.parameters.trials = 60;
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 0.7;
-this.parameters.pH_L = 0.2;
+// this.parameters.pH_W = 0.7;
+// this.parameters.pH_L = 0.2;
+this.parameters.pH_H = 0.7;
+this.parameters.pH_T = 0.3;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL"; 
 },
@@ -425,18 +427,34 @@ this.parent.parameters.reward += this.parameters.reward;
               "run": function anonymous(
 ) {
 debugger
-if (this.parameters.last_reward == "NULL")
+// if (this.parameters.last_reward == "NULL")
+//   if (Math.random() < .5)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else if (this.parameters.last_reward == "WIN")
+//   if (Math.random() < this.parameters.pH_W)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else
+//   if (Math.random() < this.parameters.pH_L)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+
+if (this.parameters.last_action == "NULL")
   if (Math.random() < .5)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
-else if (this.parameters.last_reward == "WIN")
-  if (Math.random() < this.parameters.pH_W)
+else if (this.parameters.last_action == "HEAD")
+  if (Math.random() < this.parameters.pH_H)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
 else
-  if (Math.random() < this.parameters.pH_L)
+  if (Math.random() < this.parameters.pH_T)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
@@ -1193,8 +1211,10 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 0.3;
-this.parameters.pH_L = 0.8;
+// this.parameters.pH_W = 0.3;
+// this.parameters.pH_L = 0.8;
+this.parameters.pH_H = 0.3;
+this.parameters.pH_T = 0.7;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
@@ -1371,18 +1391,34 @@ this.parent.parameters.reward += this.parameters.reward;
               "run": function anonymous(
 ) {
 debugger
-if (this.parameters.last_reward == "NULL")
+// if (this.parameters.last_reward == "NULL")
+//   if (Math.random() < .5)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else if (this.parameters.last_reward == "WIN")
+//   if (Math.random() < this.parameters.pH_W)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else
+//   if (Math.random() < this.parameters.pH_L)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+
+if (this.parameters.last_action == "NULL")
   if (Math.random() < .5)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
-else if (this.parameters.last_reward == "WIN")
-  if (Math.random() < this.parameters.pH_W)
+else if (this.parameters.last_action == "HEAD")
+  if (Math.random() < this.parameters.pH_H)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
 else
-  if (Math.random() < this.parameters.pH_L)
+  if (Math.random() < this.parameters.pH_T)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
@@ -2139,8 +2175,10 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_H = 0.7;
-this.parameters.pH_T = 0.3;
+// this.parameters.pH_H = 0.7;
+// this.parameters.pH_T = 0.3;
+this.parameters.pH_W = 0.7;
+this.parameters.pH_L = 0.2;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
@@ -2317,18 +2355,34 @@ this.parent.parameters.reward += this.parameters.reward;
               "run": function anonymous(
 ) {
 debugger
-if (this.parameters.last_action == "NULL")
+// if (this.parameters.last_action == "NULL")
+//   if (Math.random() < .5)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else if (this.parameters.last_action == "HEAD")
+//   if (Math.random() < this.parameters.pH_H)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else
+//   if (Math.random() < this.parameters.pH_T)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+
+if (this.parameters.last_reward == "NULL")
   if (Math.random() < .5)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
-else if (this.parameters.last_action == "HEAD")
-  if (Math.random() < this.parameters.pH_H)
+else if (this.parameters.last_reward == "WIN")
+  if (Math.random() < this.parameters.pH_W)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
 else
-  if (Math.random() < this.parameters.pH_T)
+  if (Math.random() < this.parameters.pH_L)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
@@ -3085,8 +3139,10 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_H = 0.3;
-this.parameters.pH_T = 0.7;
+// this.parameters.pH_H = 0.3;
+// this.parameters.pH_T = 0.7;
+this.parameters.pH_W = 0.3;
+this.parameters.pH_L = 0.8;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
@@ -3263,18 +3319,34 @@ this.parent.parameters.reward += this.parameters.reward;
               "run": function anonymous(
 ) {
 debugger
-if (this.parameters.last_action == "NULL")
+// if (this.parameters.last_action == "NULL")
+//   if (Math.random() < .5)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else if (this.parameters.last_action == "HEAD")
+//   if (Math.random() < this.parameters.pH_H)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else
+//   if (Math.random() < this.parameters.pH_T)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+
+if (this.parameters.last_reward == "NULL")
   if (Math.random() < .5)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
-else if (this.parameters.last_action == "HEAD")
-  if (Math.random() < this.parameters.pH_H)
+else if (this.parameters.last_reward == "WIN")
+  if (Math.random() < this.parameters.pH_W)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
 else
-  if (Math.random() < this.parameters.pH_T)
+  if (Math.random() < this.parameters.pH_L)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
@@ -4031,8 +4103,10 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 0.7;
-this.parameters.pH_L = 0.2;
+// this.parameters.pH_W = 0.7;
+// this.parameters.pH_L = 0.2;
+this.parameters.pH_H = 0.7;
+this.parameters.pH_T = 0.3;
 this.parameters.last_action = "NULL";
 this.parameters.last_reward = "NULL";
 },
@@ -4209,18 +4283,34 @@ this.parent.parameters.reward += this.parameters.reward;
               "run": function anonymous(
 ) {
 debugger
-if (this.parameters.last_reward == "NULL")
+// if (this.parameters.last_reward == "NULL")
+//   if (Math.random() < .5)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else if (this.parameters.last_reward == "WIN")
+//   if (Math.random() < this.parameters.pH_W)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+// else
+//   if (Math.random() < this.parameters.pH_L)
+//     this.parent.parameters.AI_action = "HEAD"
+//   else
+//     this.parent.parameters.AI_action = "TAIL"
+
+if (this.parameters.last_action == "NULL")
   if (Math.random() < .5)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
-else if (this.parameters.last_reward == "WIN")
-  if (Math.random() < this.parameters.pH_W)
+else if (this.parameters.last_action == "HEAD")
+  if (Math.random() < this.parameters.pH_H)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
 else
-  if (Math.random() < this.parameters.pH_L)
+  if (Math.random() < this.parameters.pH_T)
     this.parent.parameters.AI_action = "HEAD"
   else
     this.parent.parameters.AI_action = "TAIL"
@@ -4636,7 +4726,7 @@ this.parent.parent.parameters.done += 1;
                 "left": 0,
                 "top": 62,
                 "angle": 0,
-                "width": 571.52,
+                "width": 606.36,
                 "height": 27.12,
                 "stroke": null,
                 "strokeWidth": 1,
@@ -4690,7 +4780,7 @@ this.parent.parent.parameters.done += 1;
                 "left": 200,
                 "top": -250,
                 "angle": 0,
-                "width": 312.32,
+                "width": 324.46,
                 "height": 22.6,
                 "stroke": null,
                 "strokeWidth": 1,
@@ -4708,7 +4798,7 @@ this.parent.parent.parameters.done += 1;
                 "left": 200,
                 "top": -200,
                 "angle": 0,
-                "width": 295.68,
+                "width": 307.38,
                 "height": 22.6,
                 "stroke": null,
                 "strokeWidth": 1,
@@ -4781,8 +4871,8 @@ this.parent.parent.parameters.done += 1;
         },
         {
           "type": "i-text",
-          "left": 0,
-          "top": 75,
+          "left": -15,
+          "top": 100,
           "angle": 0,
           "width": 168,
           "height": 27.12,
@@ -4814,31 +4904,11 @@ this.parent.parent.parameters.done += 1;
           "fontFamily": "sans-serif",
           "lineHeight": 1.16,
           "textAlign": "center"
-        },
-        {
-          "type": "i-text",
-          "left": 0,
-          "top": 250,
-          "angle": 0,
-          "width": 144,
-          "height": 27.12,
-          "stroke": null,
-          "strokeWidth": 1,
-          "fill": "#ffffff",
-          "text": "按空格键继续",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-          "fontSize": "24",
-          "fontFamily": "sans-serif",
-          "lineHeight": 1.16,
-          "textAlign": "center"
         }
       ],
       "files": {},
       "parameters": {},
-      "responses": {
-        "keypress(Space)": "continue"
-      },
+      "responses": {},
       "messageHandlers": {
         "run": function anonymous(
 ) {
@@ -4851,6 +4921,7 @@ this.parameters.rmb = this.parameters.reward / 30
         600
       ],
       "title": "End",
+      "timeout": "1000",
       "tardy": true
     }
   ]
