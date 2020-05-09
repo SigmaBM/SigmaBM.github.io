@@ -245,6 +245,7 @@ this.parent.parameters.trials = 60;
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
+debugger
 this.parameters.reward = 0;
 this.parameters.done = 0;
 this.parameters.pH_W = 1.;
