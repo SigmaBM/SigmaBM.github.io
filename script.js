@@ -247,8 +247,8 @@ this.parent.parameters.trials = 60;
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 1.;
-this.parameters.pH_L = 0.;
+this.parameters.pH_W = 0.8;
+this.parameters.pH_L = 0.2;
 // this.parameters.pH_H = 0.7;
 // this.parameters.pH_T = 0.3;
 this.parameters.last_action = "NULL";
@@ -1211,8 +1211,8 @@ this.parent.parameters.count_down -= 1
 ) {
 this.parameters.reward = 0;
 this.parameters.done = 0;
-this.parameters.pH_W = 0;
-this.parameters.pH_L = 1;
+this.parameters.pH_W = 0.2;
+this.parameters.pH_L = 0.8;
 // this.parameters.pH_H = 0.3;
 // this.parameters.pH_T = 0.7;
 this.parameters.last_action = "NULL";
